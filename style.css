@@ -1,0 +1,153 @@
+:root {
+    --Moderateviolet: hsl(263, 55%, 52%);
+    --Verydarkgrayishblue: hsl(217, 19%, 35%);
+    --Verydarkblackishblue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Lightgray: hsl(0, 0%, 81%);
+    --Lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+body {
+    width: 375px;
+
+}
+
+.section {
+    margin: 20px auto;
+    width: 85%;
+    background-color: var(--Moderateviolet);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.400);
+}
+
+.divsection {
+    display: flex;
+
+
+}
+
+.pdivsection {
+    color: white;
+    margin: 5px;
+}
+
+.pdivsection::after {
+    content: " Verified Graduate";
+    display: flex;
+    opacity: 50%;
+
+}
+.--kira,.--jeanette::after{
+    content: " Verified Graduate";
+    color: black;
+    opacity: 50%;
+}
+.--kira,.--jeanette{
+    color: black;
+}
+
+.img {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.psection1,
+.psection2,
+.psection4 {
+    color: white;
+    font-size: 24px;
+    width: 95%;
+
+}
+
+.p2section1,
+.p2section2,
+.p2section4 {
+    color: var(--Lightgray);
+    font-size: 13px;
+    width: 95%;
+    opacity: 70%;
+}
+
+.section1 {
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 200px;
+}
+
+.section2 {
+    background-color: var(--Verydarkgrayishblue);
+}
+
+.section3 {
+    background-color: white;
+}
+
+.psection3,
+.psection5 {
+    font-size: 24px;
+    width: 95%;
+}
+
+.p2section3,
+.p2section5 {
+    font-size: 13px;
+    width: 95%;
+    opacity: 70%;
+}
+
+.section4 {
+    background-color: var(--Verydarkblackishblue);
+}
+
+.section5 {
+    background-color: white;
+}
+
+@media(min-width:376px) {
+    body {
+        width: auto;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "section1 section1 section2 section5"
+            "section3 section4 section4 section5";
+    }
+
+    .section {
+        margin: 10px;
+        padding: 0 auto;
+        width: fit-content;
+
+    }
+
+    .section1 {
+        grid-area: section1;
+
+    }
+
+    .section12 {
+        grid-area: section2;
+    }
+
+    .section3 {
+        grid-area: section3;
+    }
+
+    .section4 {
+        grid-area: section4;
+
+    }
+
+    .section5 {
+        grid-area: section5;
+    }
+
+}
